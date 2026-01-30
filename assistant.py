@@ -10,7 +10,7 @@ genai.configure(api_key=gemini_api_key)
 
 # Configure the model
 # Using 1.5 Flash for speed, or 'gemini-1.5-pro' for more complex reasoning
-model = genai.GenerativeModel('gemini-2.5-flash')
+model = genai.GenerativeModel('gemini-2.5-flash-lite')
 
 st.set_page_config(page_title="Puneri Pattern | AI Mentor", page_icon="logo.png", layout="wide")
 
@@ -195,4 +195,5 @@ Note: Paying with Easebuzz is the most secure way of payment. It is the most saf
                 message_placeholder.markdown(full_response + "▌")
             message_placeholder.markdown(full_response)
     
+
     st.session_state.messages.append({"role": "assistant", "content": full_response})
